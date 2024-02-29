@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<title>About Us</title>
+	</head>
+	<body class="box-border font-normal leading-4 relative font-customFont bg-bg bg-heroImg bg-contain bg-top bg-no-repeat">
+		<!--Navbar-->
+		<nav class="absolute z-10 left-0 right-0 top-0 p-3 lg:p-6">
+			<div
+				class="container max-w-7xl mx-auto flex items-center justify-between"
+			>
+				<a href="/index.html">
+					<div>
+						<img src="/assets/logo.svg" alt="logo ipsum" />
+					</div>
+				</a>
+
+				<div class="flex gap-3">
+					<div class="hidden lg:flex">
+						<div class="px-6 py-4"
+							><a
+								class="font-bold text-xl text-white hover:text-primary"
+								href="/index.html"
+								>Home</a
+							></div
+						>
+						<div class="px-6 py-4"
+							><a
+								class="font-bold text-xl text-white hover:text-primary"
+								href="/aboutUs.html"
+								>About us</a
+							></div
+						>
+						<div class="px-6 py-4"
+							><a
+								class="font-bold text-xl text-white hover:text-primary"
+								href="/contactUs.html"
+								>Contact us</a
+							></div
+						>
+					</div>
+					
+	
+					<div class="flex items-center justify-center gap-2.5">
+						<div class="hidden lg:flex gap-2.5">
+							<a
+								href="#"
+								class="text-white bg-primary baseline p-3.5 px-7 font-bold rounded-xl hover:bg-white hover:text-primary"
+								>Log In</a
+							>
+							<a
+								href="#"
+								class="text-white bg-primary baseline p-3.5 px-7 font-bold rounded-xl hover:bg-primary hover:text-white "
+								>Sign Up</a
+							>
+						</div>
+						<!-- Hamburger Icon -->
+						<button
+							id="toggleButton"
+							class="lg:hidden text-white focus:outline-none"
+						>
+							<div class="w-10 h-[3px] rounded-[0.0725rem] bg-white mb-1"></div>
+							<div class="w-10 h-[3px] rounded-[0.0725rem] bg-white mb-1"></div>
+							<div class="w-10 h-[3px] rounded-[0.0725rem] bg-white"></div>
+						</button>
+						<div id="flagButton" class="cursor-pointer">
+							<img src="/assets/flag.svg" alt="flag" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Mobile Menu -->
+			<div
+				id="mobileMenu"
+				class="lg:hidden bg-tertiary fixed inset-0 bg-secondary z-50 hidden"
+			>
+				<div class="flex items-center justify-end p-4">
+					<button
+						id="closeButton"
+						class="focus:outline-none text-white text-[48px]"
+					>
+						×
+					</button>
+				</div>
+				<div class="flex flex-col items-start px-3">
+					<a href="/index.html" class="py-2 text-white mb-2 block text-xl ">Home</a>
+					<a href="/aboutUs.html" class="py-2 text-white mb-2 block text-xl ">About us</a>
+					<a href="/contactUs.html" class="py-2 text-white mb-2 block text-xl ">Contact us</a>
+					<a
+						href="#"
+						class="text-white bg-primary baseline p-3.5 px-7 font-bold rounded-xl hover:bg-primary hover:text-white  block mb-4"
+						>Log In</a
+					>
+					<a
+						href="#"
+						class="text-white bg-primary baseline p-3.5 px-7 font-bold rounded-xl hover:bg-primary hover:text-white "
+						>Sign Up</a
+					>
+				</div>
+			</div>
+			<!-- Flag Menu -->
+			<div id="flagMenu" class="fixed inset-0 bg-white z-50 hidden overflow-y-auto max-w-3xl max-h-[500px] mx-auto my-auto rounded-xl shadow-lg">
+				<div class="flex items-center justify-end p-4 absolute right-0 top-2">
+					<button
+						id="closeButtonFlag"
+						class="focus:outline-none text-darkBrown text-[18px] h-3.5 leading-3"
+					>
+						×
+					</button>
+				</div>
+				<div
+					class="flex flex-col items-left justify-center gap-1.5 overflow-y-auto"
+				>
+					<div>
+						<div class="langTitle ml-8 mt-6">
+							<h6
+								class="text-2.4xl leading-2.9xl text-[24px] not-italic font-medium leading-[120%]"
+							>
+								Select language:
+							</h6>
+							<div class="flagsBox grid grid-cols-2 gap-5 mt-12 lg:grid-cols-4">
+								<div class="bulgarianBox flex gap-4">
+									<img
+										src="/flags/Bulgaria (BG).png"
+										alt="bulgarian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Bulgarian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/China (CN).png"
+										alt="chinese flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Chinese</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Czech Republic (CZ).png"
+										alt="czech flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Czech</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Denmark (DK).png"
+										alt="Danish flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Danish</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Netherlands (NL).png"
+										alt="dutch flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Dutch</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/United Kingdom (GB) (1).png"
+										alt="english flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>English</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Estonia (EE).png"
+										alt="estonian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Estonian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Finland (FI).png"
+										alt="finnish flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Finnish</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/France (FR).png"
+										alt="french flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>French</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Germany (DE).png"
+										alt="german flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>German</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Greece (GR).png"
+										alt="greek flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Greek</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Hungary (HU).png"
+										alt="hungarian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Hungarian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Indonesia (ID).png"
+										alt="indonesian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Indonesian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Italy (IT).png"
+										alt="italian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Italian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Japan (JP).png"
+										alt="japanese flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Japanese</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/South Korea (KR).png"
+										alt="korean flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Korean</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Latvia (LV).png"
+										alt="latvian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Latvian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Lithuania (LT).png"
+										alt="Lithuanian"
+										class="max-w-full max-h-full"
+									/>
+									<p>Lithuanian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Norway (NO).png"
+										alt="norwegian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Norwegian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Poland (PL).png"
+										alt="Polish flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Polish</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Portugal (PT).png"
+										alt="Portuguese flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Portuguese</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Romania (RO).png"
+										alt="romanian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Romanian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Russia (RU).png"
+										alt="russian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Russian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Slovakia (SK).png"
+										alt="slovak flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Slovak</p>
+								</div>
+							<div class="chineseBox flex gap-4">
+								<img
+									src="/flags/Slovenia (SI).png"
+									alt="Slovenian flag"
+									class="max-w-full max-h-full"
+								/>
+								<p>Slovenian</p>
+							</div>
+							<div class="chineseBox flex gap-4">
+								<img
+									src="/flags/Spain (ES).png"
+									alt="spanish flag"
+									class="max-w-full max-h-full"
+								/>
+								<p>Spanish</p>
+							</div>
+							<div class="chineseBox flex gap-4">
+								<img
+									src="/flags/Sweden (SE).png"
+									alt="Swedish flag"
+									class="max-w-full max-h-full"
+								/>
+								<p>Swedish</p>
+							</div>
+							<div class="chineseBox flex gap-4">
+								<img
+									src="/flags/icon _Turkey_.png"
+									alt="turkish flag"
+									class="max-w-full max-h-full"
+								/>
+								<p>Turkish</p>
+							</div>
+							<div class="chineseBox flex gap-4">
+								<img
+									src="/flags/Ukraine (UA).png"
+									alt="ukrainian flag"
+									class="max-w-full max-h-full"
+								/>
+								<p>Ukrainian</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<section class="relative z-0 pt-20 pb-0 md:py-32 lg:py-0" id="heroSectionAboutUs">
+			<!--Flex container-->
+			<div class="relative z-2  container max-w-7xl mx-auto flex flex-col justify-center items-center gap-2.5 self-stretch lg:flex-row p-6 lg:pb-20 lg:pt-36 lg:h-[28rem]">
+				<!--Title Box-->
+				<div>
+					<h1
+						class="text-3xl lg:text-5xl text-white font-black leading-[67px] tracking-normal text-center"
+					>
+						About us
+					</h1>
+				</div>
+			</div>
+		</section>
+		<!--Cv Section-->
+		<section class="pt-12" id="cvSection">
+			<!--Flex container-->
+			<div
+				class="flex flex-col items-center justify-center mx-auto gap-12 px-2"
+			>
+				<!--First row-->
+				<div
+					class="flex justify-center flex-col items-center gap-12 lg:flex-row self-stretch max-w-7xl mx-auto py-8"
+				>
+				<!-- Img left -->
+				<div class="flex justify-center items-center ">
+					<img
+						src="/assets/about-one.png"
+						alt="richard cv"
+						class="max-w-full h-auto"
+					/>
+				</div>
+					<!-- Text right -->
+					<div class="p-4 lg:w-6/12 lg:p-8 text-white">
+						<h3
+							class="text-2xl leading-6 lg:text-4xl font-bold lg:leading-10 text-left pb-4 lg:pb-6"
+						>
+						Empowering Future Coders
+						</h3>
+						<p class="text-[18px] font-medium leading-[25px] text-left">
+							Believing in the transformative power of coding, our platform was established to provide exploratory and comprehensive coding lessons. We're dedicated to equipping our learners with not just theoretical knowledge, but also the practical skills crucial for success in the tech world. Our mission is to guide and support you on your journey to becoming a proficient coder.					</p>
+					</div>
+					
+
+					
+				</div>
+				<!--Second row-->
+				<div
+					class="flex justify-center flex-col-reverse items-center gap-12 lg:flex-row self-stretch max-w-7xl mx-auto py-8 pb-20"
+				>
+					<!-- Text right -->
+					<div class="p-4 lg:w-6/12 lg:p-8 text-white">
+						<h3
+							class="text-2xl leading-6 lg:text-4xl font-bold lg:leading-10 text-left pb-4 lg:pb-6"
+						>
+						A Commitment to Real-World Coding Skills
+						</h3>
+						<p class="text-[18px] font-medium leading-[25px] text-left">
+							Our approach to teaching programming goes beyond theoretical learning. We emphasize hands-on experience and practical application, ensuring that what you learn can be directly applied to real-world scenarios. We're excited to welcome you into the world of coding, where every lesson brings you one step closer to becoming a skilled programmer ready for the challenges of the tech industry.			</p>
+					</div>
+					<!-- Img left -->
+					<div class="flex justify-center items-center ">
+						<img
+							src="/assets/about-two.png"
+							alt="richard cv"
+							class="max-w-full h-auto"
+						/>
+					</div>
+
+					
+				</div>
+			</div>
+		</section>
+		<!-- Footer -->
+		<footer class="bg-secondary text-white pt-10 pb-4 px-6 ">
+			<!-- Container -->
+			<div
+				class="max-w-7xl flex flex-col items-center justify-center mx-auto lg:px-6"
+			>
+				<!-- Footer wrapper -->
+				<div class="w-full">
+					<!-- Logo, Links and Contact wrapper -->
+					<div class="flex flex-col justify-between lg:flex-row gap-4">
+						<!-- Logo -->
+						<a href="/index.html">
+							<div><img src="/assets/logo.svg" alt="logo ipsum" /></div
+						></a>
+
+						<!-- Links -->
+						<div
+							class="max-w-[200px] flex flex-col items-start gap-2.5 self-stretch"
+						>
+							<h4 class="text-[26px] not-italic font-semibold leading-[120%]">
+								Useful Links
+							</h4>
+							<a
+								class="text-[18px] not-italic font-medium leading-[140%]"
+								href="/aboutUs.html"
+								>About Us</a
+							>
+							<a
+								class="text-[18px] not-italic font-medium leading-[140%]"
+								href="/contactUs.html"
+								>Contact Us</a
+							>
+							<a
+								class="text-[18px] not-italic font-medium leading-[140%]"
+								href="#"
+								>Terms of Use</a
+							>
+							<a
+								class="text-[18px] not-italic font-medium leading-[140%]"
+								href="#"
+								>Privacy Policy</a
+							>
+							<a
+								class="text-[18px] not-italic font-medium leading-[140%]"
+								href="/subscriptionAndCancellationPolicy.html"
+								>Subscription and cancellation policy</a
+							>
+							<a
+								class="text-[18px] not-italic font-medium leading-[140%]"
+								href="/cancelSubscription.html"
+								>Unsubscribe</a
+							>
+						</div>
+						<!-- Contact -->
+						<div
+							class="max-w-[350px] flex flex-col items-start gap-2.5 lg:maw-w-[350px]"
+						>
+							<h4 class="text-[26px] not-italic font-semibold leading-[120%]">
+								Contact Information
+							</h4>
+							<p class="text-[18px] not-italic font-medium leading-[140%]">
+								Email: support@test.com
+							</p>
+							<p class="text-[18px] not-italic font-medium leading-[140%]">
+								Phone: +44 123456789
+							</p>
+							<p class="text-[18px] not-italic font-medium leading-[140%]">
+								Working Hours: Monday - Friday 00-24 (CET), Weekends 9:00 -
+								17:00 (CET)
+							</p>
+							<p class="text-[18px] not-italic font-medium leading-[140%]">
+								Address: 21 cromwell road, ringsfield, suffolk, Beccles Nr34
+								8lr, United Kingdom
+							</p>
+						</div>
+					</div>
+					<!-- VISA images -->
+					<div
+						class="flex items-center justify-center pt-[40px] pb-[20px] gap-4"
+					>
+						<img src="/assets/master.svg" alt="master" />
+						<img src="/assets/visa.svg" alt="visa" />
+					</div>
+					<!--LINE -->
+					<div class="border-t border-white border-solid my-4"></div>
+					<p
+						class="text-sm not-italic font-normal leading-4s text-center pt-1.5"
+					>
+						Copyright © Budgetbscope 2023. Blindscope limited - CR: 14031689 -
+						21 cromwell road, ringsfield, suffolk, Beccles Nr34 8lr, United
+						Kingdom | All rights reserved.
+					</p>
+				</div>
+			</div>
+		</footer>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const toggleButton = document.getElementById('toggleButton');
+				const mobileMenu = document.getElementById('mobileMenu');
+				const closeButton = document.getElementById('closeButton');
+
+				const flagButton = document.getElementById('flagButton');
+				const flagMenu = document.getElementById('flagMenu');
+				const closeButtonFlag = document.getElementById('closeButtonFlag');
+
+				toggleButton.addEventListener('click', function () {
+					mobileMenu.classList.toggle('hidden');
+				});
+
+				closeButton.addEventListener('click', function () {
+					mobileMenu.classList.add('hidden');
+				});
+
+				flagButton.addEventListener('click', function () {
+					flagMenu.classList.toggle('hidden');
+				});
+
+				closeButtonFlag.addEventListener('click', function () {
+					flagMenu.classList.add('hidden');
+				});
+			});
+		</script>
+	</body>
+</html>

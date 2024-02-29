@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" class="text-base overflow-x-hidden smooth-scroll">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<title>Subscription and cancellation policy</title>
+	</head>
+	<body class="box-border font-normal leading-4 relative font-customFont bg-bg bg-heroImg bg-contain bg-top bg-no-repeat">
+		<!--Navbar-->
+		<nav class="absolute z-10 left-0 right-0 top-0 p-3 lg:p-6">
+			<div
+				class="container max-w-7xl mx-auto flex items-center justify-between"
+			>
+				<a href="/index.html">
+					<div>
+						<img src="/assets/logo.svg" alt="logo ipsum" />
+					</div>
+				</a>
+
+				<div class="flex gap-3">
+					<div class="hidden lg:flex">
+						<div class="px-6 py-4"
+							><a
+								class="font-bold text-xl text-white hover:text-primary"
+								href="/index.html"
+								>Home</a
+							></div
+						>
+						<div class="px-6 py-4"
+							><a
+								class="font-bold text-xl text-white hover:text-primary"
+								href="/aboutUs.html"
+								>About us</a
+							></div
+						>
+						<div class="px-6 py-4"
+							><a
+								class="font-bold text-xl text-white hover:text-primary"
+								href="/contactUs.html"
+								>Contact us</a
+							></div
+						>
+					</div>
+					
+	
+					<div class="flex items-center justify-center gap-2.5">
+						<div class="hidden lg:flex gap-2.5">
+							<a
+								href="#"
+								class="text-white bg-primary baseline p-3.5 px-7 font-bold rounded-xl hover:bg-white hover:text-primary"
+								>Log In</a
+							>
+							<a
+								href="#"
+								class="text-white bg-primary baseline p-3.5 px-7 font-bold rounded-xl hover:bg-primary hover:text-white "
+								>Sign Up</a
+							>
+						</div>
+						<!-- Hamburger Icon -->
+						<button
+							id="toggleButton"
+							class="lg:hidden text-white focus:outline-none"
+						>
+							<div class="w-10 h-[3px] rounded-[0.0725rem] bg-white mb-1"></div>
+							<div class="w-10 h-[3px] rounded-[0.0725rem] bg-white mb-1"></div>
+							<div class="w-10 h-[3px] rounded-[0.0725rem] bg-white"></div>
+						</button>
+						<div id="flagButton" class="cursor-pointer">
+							<img src="/assets/flag.svg" alt="flag" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Mobile Menu -->
+			<div
+				id="mobileMenu"
+				class="lg:hidden bg-tertiary fixed inset-0 bg-secondary z-50 hidden"
+			>
+				<div class="flex items-center justify-end p-4">
+					<button
+						id="closeButton"
+						class="focus:outline-none text-white text-[48px]"
+					>
+						×
+					</button>
+				</div>
+				<div class="flex flex-col items-center">
+					<a href="/index.html" class="py-2 text-white mb-2 block text-xl ">Home</a>
+					<a href="/aboutUs.html" class="py-2 text-white mb-2 block text-xl ">About us</a>
+					<a href="/contactUs.html" class="py-2 text-white mb-2 block text-xl ">Contact us</a>
+					<a
+						href="#"
+						class="text-white bg-primary baseline p-3.5 px-7 font-bold rounded-xl hover:bg-primary hover:text-white  block mb-4"
+						>Log In</a
+					>
+					<a
+						href="#"
+						class="text-white bg-primary baseline p-3.5 px-7 font-bold rounded-xl hover:bg-primary hover:text-white "
+						>Sign Up</a
+					>
+				</div>
+			</div>
+			<!-- Flag Menu -->
+			<div id="flagMenu" class="fixed inset-0 bg-white z-50 hidden overflow-y-auto max-w-3xl max-h-[500px] mx-auto my-auto rounded-xl shadow-lg">
+				<div class="flex items-center justify-end p-4 absolute right-0 top-2">
+					<button
+						id="closeButtonFlag"
+						class="focus:outline-none text-darkBrown text-[18px] h-3.5 leading-3"
+					>
+						×
+					</button>
+				</div>
+				<div
+					class="flex flex-col items-left justify-center gap-1.5 overflow-y-auto"
+				>
+					<div>
+						<div class="langTitle ml-8 mt-6">
+							<h6
+								class="text-2.4xl leading-2.9xl text-[24px] not-italic font-medium leading-[120%]"
+							>
+								Select language:
+							</h6>
+							<div class="flagsBox grid grid-cols-2 gap-5 mt-12 lg:grid-cols-4">
+								<div class="bulgarianBox flex gap-4">
+									<img
+										src="/flags/Bulgaria (BG).png"
+										alt="bulgarian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Bulgarian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/China (CN).png"
+										alt="chinese flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Chinese</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Czech Republic (CZ).png"
+										alt="czech flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Czech</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Denmark (DK).png"
+										alt="Danish flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Danish</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Netherlands (NL).png"
+										alt="dutch flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Dutch</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/United Kingdom (GB) (1).png"
+										alt="english flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>English</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Estonia (EE).png"
+										alt="estonian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Estonian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Finland (FI).png"
+										alt="finnish flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Finnish</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/France (FR).png"
+										alt="french flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>French</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Germany (DE).png"
+										alt="german flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>German</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Greece (GR).png"
+										alt="greek flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Greek</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Hungary (HU).png"
+										alt="hungarian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Hungarian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Indonesia (ID).png"
+										alt="indonesian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Indonesian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Italy (IT).png"
+										alt="italian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Italian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Japan (JP).png"
+										alt="japanese flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Japanese</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/South Korea (KR).png"
+										alt="korean flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Korean</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Latvia (LV).png"
+										alt="latvian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Latvian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Lithuania (LT).png"
+										alt="Lithuanian"
+										class="max-w-full max-h-full"
+									/>
+									<p>Lithuanian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Norway (NO).png"
+										alt="norwegian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Norwegian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Poland (PL).png"
+										alt="Polish flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Polish</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Portugal (PT).png"
+										alt="Portuguese flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Portuguese</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Romania (RO).png"
+										alt="romanian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Romanian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Russia (RU).png"
+										alt="russian flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Russian</p>
+								</div>
+								<div class="chineseBox flex gap-4">
+									<img
+										src="/flags/Slovakia (SK).png"
+										alt="slovak flag"
+										class="max-w-full max-h-full"
+									/>
+									<p>Slovak</p>
+								</div>
+							<div class="chineseBox flex gap-4">
+								<img
+									src="/flags/Slovenia (SI).png"
+									alt="Slovenian flag"
+									class="max-w-full max-h-full"
+								/>
+								<p>Slovenian</p>
+							</div>
+							<div class="chineseBox flex gap-4">
+								<img
+									src="/flags/Spain (ES).png"
+									alt="spanish flag"
+									class="max-w-full max-h-full"
+								/>
+								<p>Spanish</p>
+							</div>
+							<div class="chineseBox flex gap-4">
+								<img
+									src="/flags/Sweden (SE).png"
+									alt="Swedish flag"
+									class="max-w-full max-h-full"
+								/>
+								<p>Swedish</p>
+							</div>
+							<div class="chineseBox flex gap-4">
+								<img
+									src="/flags/icon _Turkey_.png"
+									alt="turkish flag"
+									class="max-w-full max-h-full"
+								/>
+								<p>Turkish</p>
+							</div>
+							<div class="chineseBox flex gap-4">
+								<img
+									src="/flags/Ukraine (UA).png"
+									alt="ukrainian flag"
+									class="max-w-full max-h-full"
+								/>
+								<p>Ukrainian</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<section class="relative z-0 py-20 md:py-32 lg:py-0" id="heroSectionAboutUs">
+			<!--Flex container-->
+			<div class="relative z-2  container max-w-7xl mx-auto flex flex-col justify-center items-center gap-2.5 self-stretch lg:flex-row p-6 lg:pb-20 lg:pt-36  lg:h-[28rem]">
+				<!--Title Box-->
+				<div>
+					<h1
+						class="text-3xl lg:text-5xl text-white font-black leading-[67px] tracking-normal text-center"
+					>
+						Subscription and cancellation policy
+					</h1>
+				</div>
+			</div>
+		</section>
+		<section>
+			<!-- Flex container -->
+			<div
+				class="container max-w-7xl px-6 py-8 flex flex-col items-start justify-center mx-auto leading-[1.475rem] text-white"
+			>
+				<h3
+					class="text-2xl leading-6 lg:text-4xl font-bold lg:leading-8 text-left pb-4 lg:pb-3 mt-6"
+				>
+					Subscription Policy
+				</h3>
+				<p class="text-left">
+					The Subscription price can be found in the "Pricing Table" listed
+					below, the amount and interval you will be charged depends on your
+					Country and Product selection. The cards accepted are Visa and
+					MasterCard. Once you subscribe, the following e-mails will be sent to
+					the e-mail address that you register with:
+				</p>
+				<br />
+				<ul class="list-disc pl-8">
+					<li>An invoice for the trial period.</li>
+					<li>
+						A reminder e-mail detailing the start date of your regular monthly
+						billing cycle & a copy of our terms and conditions.
+					</li>
+					<li>A welcome e-mail with your login credentials.</li>
+				</ul>
+				<br />
+				<p class="pb-[40px]">
+					You can cancel subscription any time and your profile will stay active
+					until the next billing cycle. If you decide to cancel your
+					subscription you can do it by logging into your account and clicking
+					"Cancel Membership", or you can contact our support team via e-mail
+					at: support@codegenc.com or by phone at: +44 330 808 5502. <br />
+					<br />
+					ACTINVITE LIMITED reserves the right to change the price of your
+					Subscriptions, by posting the new price on its Service. Price changes
+					for Subscriptions will take effect at the start of the next
+					subscription period following the date of the price change. As
+					permitted by local law, you accept the new price by continuing to use
+					the Service after the price change takes effect. If you do not agree
+					with the price changes, you have the right to reject the change by
+					unsubscribing from the Service prior to the price change going into
+					effect. Please therefore make sure you read any such notification of
+					price changes carefully. <br />
+					<br />
+					If you do not cancel your membership by the time your trial period
+					expires, your card will be charged the regular monthly subscription
+					fee. Subscription prices by Country can be found in “Pricing by
+					country” table which can be found in our Terms and Conditions.
+				</p>
+				<h3
+					class="text-2xl leading-6 lg:text-4xl font-bold lg:leading-8 text-left pb-4 lg:pb-3 mt-6"
+				>
+					Pricing table
+				</h3>
+				<p class="text-[21px] not-italic font-normal leading-[120%] pb-2">
+					Code Gold
+				</p>
+				<div class="table-wrapper overflow-x-auto rounded-md" style="width: inherit">
+					<table class="overflow-hidden w-full border border-primary ">
+						<thead>
+							<tr class="text-secondary">
+								<th class="text-left px-3 py-2 bg-primary">Country</th>
+								<th class="px-2.5 py-2 bg-primary">Trial Days</th>
+								<th class="px-2.5 py-2 bg-primary">Trial Price</th>
+								<th class="px-2.5 py-2 bg-primary">Recurring Interval - Days</th>
+								<th class="px-2.5 py-2 bg-primary">Recurring Price</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr
+								class="text-primary text-center border-b border-primary"
+							>
+								<td class="px-2.5 py-1.5 text-left">Austria</td>
+								<td class="px-2.5 py-1.5 ">4</td>
+								<td class="px-2.5 py-1.5 ">2.00 EUR</td>
+								<td class="px-2.5 py-1.5 ">14</td>
+								<td class="px-2.5 py-1.5">39.00 EUR</td>
+							</tr>
+							<tr
+								class="text-primary text-center border-b border-primary"
+							>
+								<td class="px-2.5 py-1.5  text-left">Australia</td>
+								<td class="px-2.5 py-1.5 ">4</td>
+								<td class="px-2.5 py-1.5 ">3.00 AUD</td>
+								<td class="px-2.5 py-1.5 ">14</td>
+								<td class="px-2.5 py-1.5">62.00 AUD</td>
+							</tr>
+							<tr
+								class="text-primary text-center border-b border-primary"
+							>
+								<td class="px-2.5 py-1.5 text-left">Belgium</td>
+								<td class="px-2.5 py-1.5">4</td>
+								<td class="px-2.5 py-1.5">2.00 EUR</td>
+								<td class="px-2.5 py-1.5">14</td>
+								<td class="px-2.5 py-1.5">39.00 EUR</td>
+							</tr>
+							<tr
+								class="text-primary text-center border-b border-primary"
+							>
+								<td class="px-2.5 py-1.5 text-left">Bulgaria</td>
+								<td class="px-2.5 py-1.5">4</td>
+								<td class="px-2.5 py-1.5">4.00 BGN</td>
+								<td class="px-2.5 py-1.5">14</td>
+								<td class="px-2.5 py-1.5">76.00 BGN</td>
+							</tr>
+							<tr
+								class="text-primary text-center border-b border-primary"
+							>
+								<td class="px-2.5 py-1.5 text-left">Canada</td>
+								<td class="px-2.5 py-1.5">4</td>
+								<td class="px-2.5 py-1.5">3.00 CAD</td>
+								<td class="px-2.5 py-1.5">14</td>
+								<td class="px-2.5 py-1.5">56.00 CAD</td>
+							</tr>
+							<tr
+								class="text-primary text-center"
+							>
+								<td class="px-2.5 py-1.5 text-left">Switzerland</td>
+								<td class="px-2.5 py-1.5">4</td>
+								<td class="px-2.5 py-1.5">3.00 CHF</td>
+								<td class="px-2.5 py-1.5">14</td>
+								<td class="px-2.5 py-1.5">40.00 CHF</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<p
+					class="text-[21px] not-italic font-normal leading-[120%] pt-[20px] pb-2"
+				>
+					Code Silver
+				</p>
+				<div class="table-wrapper overflow-x-auto rounded-md" style="width: inherit">
+					<table class="overflow-hidden w-full border border-primary">
+						<thead>
+							<tr class="text-secondary">
+								<th class="text-left px-3 py-2 bg-primary">Country</th>
+								<th class="px-2.5 py-2 bg-primary">Trial Days</th>
+								<th class="px-2.5 py-2 bg-primary">Trial Price</th>
+								<th class="px-2.5 py-2 bg-primary">Recurring Interval - Days</th>
+								<th class="px-2.5 py-2 bg-primary">Recurring Price</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr
+								class="text-primary text-center border-b border-primary"
+							>
+								<td class="px-2.5 py-1.5 text-left">Austria</td>
+								<td class="px-2.5 py-1.5 ">4</td>
+								<td class="px-2.5 py-1.5 ">2.00 EUR</td>
+								<td class="px-2.5 py-1.5 ">14</td>
+								<td class="px-2.5 py-1.5">39.00 EUR</td>
+							</tr>
+							<tr
+								class="text-primary text-center border-b border-primary"
+							>
+								<td class="px-2.5 py-1.5  text-left">Australia</td>
+								<td class="px-2.5 py-1.5 ">4</td>
+								<td class="px-2.5 py-1.5 ">3.00 AUD</td>
+								<td class="px-2.5 py-1.5 ">14</td>
+								<td class="px-2.5 py-1.5">62.00 AUD</td>
+							</tr>
+							<tr
+								class="text-primary text-center border-b border-primary"
+							>
+								<td class="px-2.5 py-1.5 text-left">Belgium</td>
+								<td class="px-2.5 py-1.5">4</td>
+								<td class="px-2.5 py-1.5">2.00 EUR</td>
+								<td class="px-2.5 py-1.5">14</td>
+								<td class="px-2.5 py-1.5">39.00 EUR</td>
+							</tr>
+							<tr
+								class="text-primary text-center border-b border-primary"
+							>
+								<td class="px-2.5 py-1.5 text-left">Bulgaria</td>
+								<td class="px-2.5 py-1.5">4</td>
+								<td class="px-2.5 py-1.5">4.00 BGN</td>
+								<td class="px-2.5 py-1.5">14</td>
+								<td class="px-2.5 py-1.5">76.00 BGN</td>
+							</tr>
+							<tr
+								class="text-primary text-center border-b border-primary"
+							>
+								<td class="px-2.5 py-1.5 text-left">Canada</td>
+								<td class="px-2.5 py-1.5">4</td>
+								<td class="px-2.5 py-1.5">3.00 CAD</td>
+								<td class="px-2.5 py-1.5">14</td>
+								<td class="px-2.5 py-1.5">56.00 CAD</td>
+							</tr>
+							<tr
+								class="text-primary text-center"
+							>
+								<td class="px-2.5 py-1.5 text-left">Switzerland</td>
+								<td class="px-2.5 py-1.5">4</td>
+								<td class="px-2.5 py-1.5">3.00 CHF</td>
+								<td class="px-2.5 py-1.5">14</td>
+								<td class="px-2.5 py-1.5">40.00 CHF</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h3
+					class="text-2xl leading-6 lg:text-4xl font-bold lg:leading-8 text-left pb-4 lg:pb-3 mt-6"
+				>
+					Cancellation
+				</h3>
+				<p class="text-left">
+					You may cancel the services by giving ACTINVITE LIMITED written notice
+					via the email: support@codegenc.com or via contacting the phone
+					number: +44 330 808 5502 or by logging in to your account and
+					canceling your subscription. <br />
+					<br />
+					You may discontinue to use and request to cancel your account and/or
+					any CodeGenc services at any time. <br />
+					<br />
+					Should you wish to do so, you may pause your subscription for an
+					unlimited duration for any reason. For further information please
+					contact support. <br />
+					<br />
+					If you cancel your subscription, your membership will stay active
+					until the next billing cycle. Once the billing cycle is finished, you
+					will no longer have access to your profile and we may delete all of
+					your user content. We accept no liability for such deleted information
+					or content.
+				</p>
+				<h3
+					class="text-2xl leading-6 lg:text-4xl font-bold lg:leading-8 text-left pb-4 lg:pb-3 mt-6"
+				>
+					Termination
+				</h3>
+				<p class="text-left">
+					ACTINVITE LIMITED may terminate your access to the services, in whole
+					or in part, without notice, in the event that: <br />
+					<br />
+					You infringe this Agreement. <br />
+					<br />
+					You fail to pay any fees due. <br />
+					<br />
+					Your use of the Service may harm ACTINVITE LIMITED or others. <br />
+					<br />
+					Violate the current Terms & Conditions. Share information concerning
+					other members’ (e-mail address, postal address, telephone number,
+					etc.). <br />
+					<br />
+					You commit Illegal behavior, non-ethical, irresponsible or any other
+					behavior that could be construed as harassment towards other members
+					or the website itself. <br />
+					<br />
+					Your account is flagged as fraudulent. <br />
+					<br />
+					In that case, ACTINVITE LIMITED shall not refund to you any fees paid
+					before termination, and you shall be obligated to pay all fees and
+					charges that occured prior to termination. <br />
+					<br />
+					Upon termination of the services for any reason: user content and user
+					data will be deleted. We are obligated by law to retain financial
+					records. <br />
+					<br />
+					Your account and use of the Service may be terminated by you or by
+					ACTINVITE LIMITED. You can request account deletion by contact
+					support. ACTINVITE LIMITED may terminate your access and use of the
+					Service at any time, for any reason, and at such time you will have no
+					further right to use the Service. The provisions of these Terms and
+					Conditions relating to the protection and enforcement of CodeGenc
+					proprietary rights, your representations and warranties, disclaimer of
+					representations and warranties, release and indemnities, limitations
+					of liability and types of damages, ownership of data and information,
+					governing law and venue, and miscellaneous provisions shall survive
+					any such termination.
+				</p>
+				<h3
+					class="text-2xl leading-6 lg:text-4xl font-bold lg:leading-8 text-left pb-4 lg:pb-3 mt-6"
+				>
+					Refunds
+				</h3>
+				<p class="text-left pb-[30px]">
+					At ACTINVITE LIMITED, we want to ensure that you are 100% happy with
+					your purchase. Our policy offers a full refund within 14 days of your
+					date of purchase. We’d love to know what went wrong and how we can
+					improve, so please include details about the reason for your refund
+					request if you reach out to us directly. <br />
+					<br />
+					To request a refund, please contact the customer support team. <br />
+					<br />
+					Email: support@codegenc.com <br />
+					<br />
+					Phone: +44 330 808 5502 <br />
+					<br />
+					We strive to provide the best customer support possible – we are open
+					Monday - Friday 00-24 (CET), Weekends 9:00 - 17:00 (CET) and will do
+					our best to guide you and answer your questions within 48 hours. All
+					questions or inquires are welcome.
+				</p>
+			</div>
+		</section>
+		<!-- Footer -->
+		<footer class="bg-lightBg text-text px-6 pt-10 pb-4 px-6 border-t border-primary">
+			<!-- Container -->
+			<div
+				class="max-w-7xl flex flex-col items-center justify-center mx-auto lg:px-6"
+			>
+				<!-- Footer wrapper -->
+				<div class="w-full">
+					<!-- Logo, Links and Contact wrapper -->
+					<div class="flex flex-col justify-between lg:flex-row gap-4">
+						<!-- Logo -->
+						<a href="/index.html">
+							<div><img src="/assets/logo.svg" alt="logo ipsum" /></div
+						></a>
+
+						<!-- Links -->
+						<div
+							class="max-w-[200px] flex flex-col items-start gap-2.5 self-stretch"
+						>
+							<h4 class="text-[26px] not-italic font-semibold leading-[120%]">
+								Useful Links
+							</h4>
+							<a
+								class="text-[18px] not-italic font-medium leading-[140%]"
+								href="/aboutUs.html"
+								>About Us</a
+							>
+							<a
+								class="text-[18px] not-italic font-medium leading-[140%]"
+								href="/contactUs.html"
+								>Contact Us</a
+							>
+							<a
+								class="text-[18px] not-italic font-medium leading-[140%]"
+								href="#"
+								>Terms of Use</a
+							>
+							<a
+								class="text-[18px] not-italic font-medium leading-[140%]"
+								href="#"
+								>Privacy Policy</a
+							>
+							<a
+								class="text-[18px] not-italic font-medium leading-[140%]"
+								href="/subscriptionAndCancellationPolicy.html"
+								>Subscription and cancellation policy</a
+							>
+							<a
+								class="text-[18px] not-italic font-medium leading-[140%]"
+								href="/cancelSubscription.html"
+								>Unsubscribe</a
+							>
+						</div>
+						<!-- Contact -->
+						<div
+							class="max-w-[350px] flex flex-col items-start gap-2.5 lg:maw-w-[350px]"
+						>
+							<h4 class="text-[26px] not-italic font-semibold leading-[120%]">
+								Contact Information
+							</h4>
+							<p class="text-[18px] not-italic font-medium leading-[140%]">
+								Email: support@test.com
+							</p>
+							<p class="text-[18px] not-italic font-medium leading-[140%]">
+								Phone: +44 123456789
+							</p>
+							<p class="text-[18px] not-italic font-medium leading-[140%]">
+								Working Hours: Monday - Friday 00-24 (CET), Weekends 9:00 -
+								17:00 (CET)
+							</p>
+							<p class="text-[18px] not-italic font-medium leading-[140%]">
+								Address: 21 cromwell road, ringsfield, suffolk, Beccles Nr34
+								8lr, United Kingdom
+							</p>
+						</div>
+					</div>
+					<!-- VISA images -->
+					<div
+						class="flex items-center justify-center pt-[40px] pb-[20px] gap-4"
+					>
+						<img src="/assets/master.svg" alt="master" />
+						<img src="/assets/visa.svg" alt="visa" />
+					</div>
+					<!--LINE -->
+					<div class="border-t border-white border-solid my-4"></div>
+					<p
+						class="text-sm not-italic font-normal leading-4s text-center pt-1.5"
+					>
+						Copyright © Budgetbscope 2023. Blindscope limited - CR: 14031689 -
+						21 cromwell road, ringsfield, suffolk, Beccles Nr34 8lr, United
+						Kingdom | All rights reserved.
+					</p>
+				</div>
+			</div>
+		</footer>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const toggleButton = document.getElementById('toggleButton');
+				const mobileMenu = document.getElementById('mobileMenu');
+				const closeButton = document.getElementById('closeButton');
+
+				const flagButton = document.getElementById('flagButton');
+				const flagMenu = document.getElementById('flagMenu');
+				const closeButtonFlag = document.getElementById('closeButtonFlag');
+
+				toggleButton.addEventListener('click', function () {
+					mobileMenu.classList.toggle('hidden');
+				});
+
+				closeButton.addEventListener('click', function () {
+					mobileMenu.classList.add('hidden');
+				});
+
+				flagButton.addEventListener('click', function () {
+					flagMenu.classList.toggle('hidden');
+				});
+
+				closeButtonFlag.addEventListener('click', function () {
+					flagMenu.classList.add('hidden');
+				});
+			});
+		</script>
+	</body>
+</html>
